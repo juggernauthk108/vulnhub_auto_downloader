@@ -18,8 +18,8 @@ import java.util.regex.Pattern;
 
 public class vulnhubLink {
 
-	public static final String URL = "C:\\Users\\Tejas.Zarekar\\Desktop\\vulnhubHome.html"; 
-	public static final String outputUrl = "C:\\Users\\Tejas.Zarekar\\Desktop\\outputURL.txt";
+	public static final String URL = "C:\\Users\\Tejas.Zarekar\\Desktop\\vulnhubHome.html"; //stores the source code temporarily
+	public static final String outputUrl = "C:\\Users\\Tejas.Zarekar\\Desktop\\outputURL.txt"; //store the path of boxes
 
 	public static void main(String[] args) throws IOException {
 
