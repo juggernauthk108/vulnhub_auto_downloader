@@ -1,5 +1,9 @@
 package crawler;
 
+/*
+output of the program in stored in the same repo name: outputURL.txt
+*/
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
