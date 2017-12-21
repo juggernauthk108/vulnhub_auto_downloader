@@ -1,9 +1,5 @@
 package crawler;
 
-/*
-output of the program in stored in the same repo name: outputURL.txt
-*/
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -16,10 +12,14 @@ import java.net.URLConnection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class vulnhubLink {
+/*
+output file can be found on the same repo: outputURL.txt
+*/
 
-	public static final String URL = "C:\\Users\\Tejas.Zarekar\\Desktop\\vulnhubHome.html"; //stores the source code temporarily
-	public static final String outputUrl = "C:\\Users\\Tejas.Zarekar\\Desktop\\outputURL.txt"; //store the path of boxes
+public class VulnhubLink {
+
+	public static final String URL = "C:\\Users\\Tejas.Zarekar\\Desktop\\vulnhubHome.html";
+	public static final String outputUrl = "C:\\Users\\Tejas.Zarekar\\Desktop\\outputURL.txt";
 
 	public static void main(String[] args) throws IOException {
 
@@ -28,7 +28,7 @@ public class vulnhubLink {
 			
 			System.out.println("going for: "+i);
 			
-			String source = getURLSource("https://www.vulnhub.com/?page="+i);
+			getURLSource("https://www.vulnhub.com/?page="+i); //this line will get the new page, overwriting the previos one
 
 			File file = new File(URL);
 			
@@ -40,8 +40,7 @@ public class vulnhubLink {
 					Pattern pattern = Pattern.compile(".*\\\"(.*.torrent)\\\".*");
 					Matcher matcher = pattern.matcher(st);
 					if (matcher.find())
-						//System.out.println(matcher.group(1).replace(".torrent", ""));
-					writer.println(matcher.group(1).replace(".torrent", ""));
+						writer.println(matcher.group(1).replace(".torrent", ""));
 					
 				}
 			}
