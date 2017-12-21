@@ -13,6 +13,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /*
+this WILL NOT dwonload the boxes to local FS but will get the list of downloadalbe content link from the site
+on which a loop can be run (in whatever environ you want and go ahead) 
 output file can be found on the same repo: outputURL.txt
 */
 
